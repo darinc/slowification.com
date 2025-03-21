@@ -35,12 +35,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll('.principle-card, .benefit-item');
-    animatedElements.forEach(el => {
+    // Only apply animations to benefit items, not principle cards
+    const benefitItems = document.querySelectorAll('.benefit-item');
+    benefitItems.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
         observer.observe(el);
+    });
+    
+    // Make principle cards visible immediately
+    const principleCards = document.querySelectorAll('.principle-card');
+    principleCards.forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+        el.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
     });
 
     // Add class to animated elements when they become visible
