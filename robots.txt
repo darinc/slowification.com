@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://slowification.com/sitemap.xml

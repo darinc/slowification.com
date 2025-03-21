@@ -219,6 +219,21 @@ footer .disclaimer {
     color: #bbb;
 }
 
+.footer-nav {
+    margin-top: 1rem;
+}
+
+.footer-nav a {
+    color: #bbb;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     h1 {
